@@ -10,9 +10,10 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # end
 
   # POST /resource
-  # def create
-  #   super
-  # end
+    #def create
+    #session[:user_id] = nil
+    #redirect_to authenticated_root_path, notice: "Logged Out"
+    #end
 
   # GET /resource/edit
   # def edit
@@ -25,9 +26,10 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # end
 
   # DELETE /resource
-  # def destroy
-  #   super
-  # end
+  #def destroy
+    #session[:user_id] = nil
+    #redirect_to authenticated_root_path, notice: "Logged Out"
+   #end
 
   # GET /resource/cancel
   # Forces the session data which is usually expired after sign

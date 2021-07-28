@@ -14,11 +14,11 @@
 
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-
-    <% if user_signed_in? %>
-    <p class="">Esta logueado el usuario</p>
-    <% end %>
     
+
+   
+    <%= render "navbar/navbar" %>
     <%= yield %>
   </body>
+  <%= button_to 'Log out', destroy_user_session_path, method: :delete %>
 </html>
