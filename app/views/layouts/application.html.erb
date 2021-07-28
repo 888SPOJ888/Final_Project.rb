@@ -17,8 +17,14 @@
     
 
    
-    <%= render "navbar/navbar" %>
+    <%#= render "navbar/navbar" %>
+    <% if user_signed_in? %>
+      <%= current_user.email %>
+      <%= button_to 'Log out', destroy_user_session_path, method: :delete %>      
+    <% else %>
+      <%= button_to 'sign in', new_user_session_path %>
+      <%#= button_to 'sign up', new_user_registration_path %>
+    <% end %>
     <%= yield %>
   </body>
-  <%= button_to 'Log out', destroy_user_session_path, method: :delete %>
 </html>

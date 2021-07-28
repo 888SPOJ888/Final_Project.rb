@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :courses
+  resources :units
+  resources :levels
+  resources :companies
   get 'home/index'
 
   devise_for :users, controllers: { registrations: 'users/registrations' }
