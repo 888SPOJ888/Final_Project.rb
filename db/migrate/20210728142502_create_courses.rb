@@ -7,3 +7,4 @@ class CreateCourses < ActiveRecord::Migration[6.1]
     end
   end
 end
+# current_user.company.courses

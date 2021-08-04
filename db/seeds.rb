@@ -5,7 +5,30 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'faker'
 
+10.times do |i|
+    
+
+    users = User.new(
+        name:  Faker::Name.name_with_middle,
+        email: Faker::Internet.email
+    )
+
+    users.save
+    
+end
 10.times do |i|
     Level.create(name: "Level ##{i}")
 end
+
+10.times do |i|
+    Course.create(name: "Course ##{i}")
+end
+
+10.times do |i|
+    Company.create(name: "Company ##{i}")
+end
+
+AdminUser.create!(email: 'administrate@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
+
