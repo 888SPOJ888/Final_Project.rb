@@ -23,7 +23,9 @@ gem 'jbuilder', '~> 2.7'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'devise', '~> 4.8'
 gem 'activeadmin', '~> 2.9'
-gem 'faker', '~> 1.6', '>= 1.6.6'
+gem 'hirb'
+gem "chartkick"
+gem 'groupdate'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
@@ -31,6 +33,7 @@ gem 'faker', '~> 1.6', '>= 1.6.6'
 gem 'bootsnap', '>= 1.4.4', require: false
 
 group :development, :test do
+gem 'faker', '~> 2.18'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end

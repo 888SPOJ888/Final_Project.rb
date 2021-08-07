@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2021-08-07
+  description: MyString
+  type: 1
+  amount: 9.99
+
+two:
+  date: 2021-08-07
+  description: MyString
+  type: 1
+  amount: 9.99
