@@ -18,13 +18,13 @@ necesitas instalar lo siguiente en tu PC:
 -
 -
 
-¿Como lo instalo?
+¿Como instalo en mi PC?
 
 presiona el boton verde 'Code' y luego descarga el ZIP
 
-extrae el proyecto del ZIP para
+extrae el proyecto del ZIP 
 
-abre tu terminal favorita
+abrelo con tu terminal favorita
 
 verifica las versionas ruby y rails , cambialas si es necesario (deben de coincidir con tu version de ambas)
 
