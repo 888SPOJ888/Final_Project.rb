@@ -8,35 +8,28 @@ Intrucciones:
 
 las siguientes instrucciones te ayudaran a obtener una copia del proyecto en tu computador. 
 
-¿Qué necesitas?
+¿Qué necesitas para esto?
 
 necesitas instalar lo siguiente en tu PC:
 
--
--
--
--
--
+- Ruby-2.7.3
+- Rails 6.1.4
+Gemas Utilizadas
+- Devise
+- Chartkick
+- Groupdate
+- Hirb
+- CanCanCan
 
-¿Como instalo en mi PC?
+¿Como lo instalo en mi PC?
 
-presiona el boton verde 'Code' y luego descarga el ZIP
+- Clonar el repo (boton verde)
+- Rails db:create
+- Rails db:migrate
+- Rails db:seed
+- Rails s
+- Enjoy
 
-extrae el proyecto del ZIP 
-
-abrelo con tu terminal favorita
-
-verifica las versionas ruby y rails , cambialas si es necesario (deben de coincidir con tu version de ambas)
-
-corre el bundle install
-
-luego ejecuta rails db:setup(esto creara la BD)
-
-ahora ejecuta rails db:migrate
-
-ejecuta rails s
-
-y verifica que todo este vien en el browser.
 
 Este proyecto fue creado con:
 
