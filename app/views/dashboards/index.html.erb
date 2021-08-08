@@ -1,6 +1,6 @@
-<%#= column_chart @column_data, stacked: true, prefix: "$", thousands: "," %>
-<%#= pie_chart Expense.group(:type).sum(:amount) %>
-
+<%= column_chart @column_data, stacked: true, prefix: "$", thousands: "," %>
+<%= pie_chart Dashboard.group(:type).sum(:amount) %>
+<br>
 <table>
   <thead>
     <tr>
