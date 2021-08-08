@@ -1,5 +1,5 @@
 <%= column_chart @column_data, stacked: true, prefix: "$", thousands: "," %>
-<%= pie_chart Dashboard.group(:type).sum(:amount) %>
+<%= pie_chart Dashboard.group(:type).count(:amount) %>
 <br>
 <table>
   <thead>

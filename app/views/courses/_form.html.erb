@@ -11,12 +11,14 @@
     </div>
   <% end %>
 
-   <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+  <div class="form-row mt-2">
+   <div class="col">
+      <%= form.label :name %>
+    <%= form.select :name_id, Course.all.collect  {|k| [k.name, k.id]}, {} ,id: :company_name_id, include_blank:false, :class => "form-control" %> %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="col">
+    <%= form.submit 'Submit', class: 'btn btn-outline-warning' %>
+  </div>
   </div>
 <% end %>

@@ -1,24 +1,53 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+English Class
 
-Things you may want to cover:
+Pagina web complementaria para los estudiantes que tienen clases presenciales o via streaming. 
 
-* Ruby version
+Intrucciones:
 
-* System dependencies
+las siguientes instrucciones te ayudaran a obtener una copia del proyecto en tu computador. 
 
-* Configuration
+¿Qué necesitas?
 
-* Database creation
+necesitas instalar lo siguiente en tu PC:
 
-* Database initialization
+-
+-
+-
+-
+-
 
-* How to run the test suite
+¿Como lo instalo?
 
-* Services (job queues, cache servers, search engines, etc.)
+presiona el boton verde 'Code' y luego descarga el ZIP
 
-* Deployment instructions
+extrae el proyecto del ZIP para
 
-* ...
+abre tu terminal favorita
+
+verifica las versionas ruby y rails , cambialas si es necesario (deben de coincidir con tu version de ambas)
+
+corre el bundle install
+
+luego ejecuta rails db:setup(esto creara la BD)
+
+ahora ejecuta rails db:migrate
+
+ejecuta rails s
+
+y verifica que todo este vien en el browser.
+
+Este proyecto fue creado con:
+
+Visual Studio
+Bootstrap
+Jquery
+JavaScript
+Ruby
+Rails
+FontAwesome
+
+Podras ver este proyecto en el siguiente link a Heroku :
+
+
