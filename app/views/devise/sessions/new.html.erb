@@ -23,4 +23,6 @@
   </div>
 <% end %>
 
+<%= f.collection_select :role, User::ROLES, :to_s, :humanize %>
+
 <%= render "devise/shared/links" %>
