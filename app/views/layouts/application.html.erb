@@ -20,14 +20,18 @@
     <p class="alert"><%= alert %></p>
     
 
-   
     <%= render partial:"shared/navbar" %>
+   <br>
     <div>
     <% if user_signed_in? %>
       <%#= current_user.courses %>
       <%= button_to 'Log out', destroy_user_session_path, method: :delete %>      
     <% else %>
-      <%= button_to 'sign in', new_user_session_path %>
+      <%
+=begin%>
+ <%= button_to 'sign in', new_user_session_path %> 
+<%
+=end%>
       <%#= button_to 'sign up', new_user_registration_path %>
     <% end %>
     </div>

@@ -3,6 +3,7 @@ class HomeController < ApplicationController
   
   def index
     @user = current_user
+    @user = User.new
 
   end
 
@@ -10,12 +11,12 @@ class HomeController < ApplicationController
     authorize! :edit    
   end
 
-  <% if can? :destroy, course %>
-    <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
-    course_path(course),
-    :method => :delete,
-    :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
-    :class => 'btn btn-mini btn-danger' %>
-  <% end %>
+  # <% if can? :destroy, course %>
+  #   <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+  #   course_path(course),
+  #   :method => :delete,
+  #   :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+  #   :class => 'btn btn-mini btn-danger' %>
+  # <% end %>
 
 end

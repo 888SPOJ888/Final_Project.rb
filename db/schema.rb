@@ -48,7 +48,7 @@ ActiveRecord::Schema.define(version: 2021_08_08_232453) do
   end
 
   create_table "companies_courses", id: false, force: :cascade do |t|
-    t.bigint "company_id", null: false
+    t.bigint "company_id", null: false:
     t.bigint "course_id", null: false
     t.index ["company_id", "course_id"], name: "index_companies_courses_on_company_id_and_course_id"
     t.index ["course_id", "company_id"], name: "index_companies_courses_on_course_id_and_company_id"

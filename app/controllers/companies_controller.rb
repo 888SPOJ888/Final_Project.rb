@@ -4,6 +4,7 @@ class CompaniesController < ApplicationController
   # GET /companies or /companies.json
   def index
     @companies = Company.all
+    @company = Company.new
   end
 
   # GET /companies/1 or /companies/1.json
@@ -49,10 +50,13 @@ class CompaniesController < ApplicationController
 
   # DELETE /companies/1 or /companies/1.json
   def destroy
-    @company.destroy
+    @company.active = false
+
+    if @company.save
     respond_to do |format|
       format.html { redirect_to companies_url, notice: "Company was successfully destroyed." }
       format.json { head :no_content }
+    end
     end
   end
 

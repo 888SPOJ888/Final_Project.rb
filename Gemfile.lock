@@ -280,6 +280,7 @@ DEPENDENCIES
   groupdate
   hirb
   jbuilder (~> 2.7)
+  jquery-rails
   pg (~> 1.1)
   puma (~> 5.0)
   rack-mini-profiler (~> 2.0)

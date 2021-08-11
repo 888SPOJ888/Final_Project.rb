@@ -1,0 +1,28 @@
+<%
+=begin%>
+ <%= form_with(model: home) do |form| %>
+  <% if home.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(home.errors.count, "error") %> prohibited this home from being saved:</h2>
+
+      <ul>
+        <% home.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-row mt-2">
+   <div class="col">
+      <%= form.label :name %>
+    <%= form.select :name_id, home.all.collect  {|k| [k.name, k.id]}, {} ,id: :company_name_id, include_blank:false, :class => "form-control" %> %>
+  </div>
+
+  <div class="col">
+    <%= form.submit 'Submit', class: 'btn btn-outline-warning' %>
+  </div>
+  </div>
+<% end %> 
+<%
+=end%>

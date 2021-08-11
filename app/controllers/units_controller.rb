@@ -4,6 +4,7 @@ class UnitsController < ApplicationController
   # GET /units or /units.json
   def index
     @units = Unit.all
+    @unit = Unit.new
   end
 
   # GET /units/1 or /units/1.json

@@ -2,9 +2,16 @@
     <h1>Welcome to classes</h1>
 </div>
 
+<%
+=begin%>
+ <%= render 'form', home: @home%> 
+<%
+=end%>
 <h3>
 <%= @user.name %>
 <%= current_user.company.name %>
 </h3>
+
+
 
 

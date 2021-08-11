@@ -2,6 +2,7 @@
 
 <h1>Companies</h1>
 
+<%= render 'form', company: @company %>
 <table>
   <thead>
     <tr>
@@ -15,12 +16,7 @@
       <tr>
         <td><%= company.name %></td>
         <td><%= link_to 'Show', company %></td>
-        <%
-=begin%>
- <td><%= link_to 'Edit', edit_company_path(company) %></td>
-        <td><%= link_to 'Destroy', company, method: :delete, data: { confirm: 'Are you sure?' } %></td> 
-<%
-=end%>
+
       </tr>
     <% end %>
   </tbody>

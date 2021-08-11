@@ -26,6 +26,8 @@ gem 'activeadmin', '~> 2.9'
 gem 'hirb'
 gem "chartkick"
 gem 'groupdate'
+gem 'jquery-rails'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
