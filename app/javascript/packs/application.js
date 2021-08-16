@@ -17,16 +17,16 @@ import "channels"
 import "chartkick/chart.js"
 
 
-import dashboard_create from "../src/dashboard_create"
+// import dashboard_create from "../src/dashboard_create"
 
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
 
-document,addEventListener('submit', function(e) {
+// document,addEventListener('submit', function(e) {
 
-    if (e.target.matches('dashboards_form')){
-        e.preventDefault()
-        dashboard_create(e)
-    }
-})
+//     if (e.target.matches('dashboards_form')){
+//         e.preventDefault()
+//         dashboard_create(e)
+//     }
+// })

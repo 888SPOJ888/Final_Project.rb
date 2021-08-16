@@ -17,6 +17,7 @@ ActiveAdmin.register Level do
     
       form do |f|
         f.inputs do
+          input :name
         end
         f.actions
       end

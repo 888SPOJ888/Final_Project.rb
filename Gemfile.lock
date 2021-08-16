@@ -276,7 +276,7 @@ DEPENDENCIES
   capybara (>= 3.26)
   chartkick
   devise (~> 4.8)
-  faker (~> 2.18)
+  faker
   groupdate
   hirb
   jbuilder (~> 2.7)
