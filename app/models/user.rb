@@ -2,6 +2,8 @@ class User < ApplicationRecord
   has_and_belongs_to_many :courses
   belongs_to :company
 
+  validates :role, presence: true
+
   # belongs_to :course
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
@@ -11,10 +13,5 @@ class User < ApplicationRecord
   def admin?
     role.name == 'Admin'
   end
-        
-        
-
-
-
 
 end

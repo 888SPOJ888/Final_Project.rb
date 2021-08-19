@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
     <title>FinalProject</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
@@ -22,26 +23,19 @@
         <%= render partial:"shared/navbar" %>
       <br>
         <div>
-        <% if user_signed_in? %>
+          <% if user_signed_in? %>
           <%#= current_user.courses %>
           <%= button_to 'Log out', destroy_user_session_path, method: :delete %>      
-        <% else %>
+          <% else %>
         
-        <% end %>
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-
+          <% end %>
+        </div>
     
+
+
+
+
+
     <%= yield %>
     </div>
   </body>

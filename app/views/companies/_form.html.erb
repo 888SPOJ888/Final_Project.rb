@@ -1,3 +1,4 @@
+<div class="container">
 <%= form_with(model: company) do |form| %>
   <% if company.errors.any? %>
     <div id="error_explanation">
@@ -11,7 +12,9 @@
     </div>
   <% end %>
 
-  <div class="form-row mt-2">
+  <%
+=begin%>
+ <div class="form-row mt-2">
     <div class="col">
   <div class="field">
     <%= form.label :name %>
@@ -21,5 +24,7 @@
   <div class="actions">
     <%= form.submit 'Submit', class: 'btn btn-outline-warning' %>
   </div>
-  </div>
+  </div> 
+<%
+=end%>
 <% end %>

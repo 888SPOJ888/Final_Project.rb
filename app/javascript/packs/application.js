@@ -7,7 +7,7 @@
 //= require turbolinks
 //= require Chart.bundle
 //= require chartkick
-//= require jquery
+//= require jquery/dist/jquery
 //= require_tree .
 
 import Rails from "@rails/ujs"
@@ -23,10 +23,3 @@ Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
 
-// document,addEventListener('submit', function(e) {
-
-//     if (e.target.matches('dashboards_form')){
-//         e.preventDefault()
-//         dashboard_create(e)
-//     }
-// })

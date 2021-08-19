@@ -1,15 +1,26 @@
+<div class="container">
 <div class="d-flex align-items-center justify-content-center ">
-    <h1>Welcome to classes</h1>
+    <h1>Welcome to classes <%= current_user.name %></h1>
 </div>
 
-<%
-=begin%>
- <%= render 'form', home: @home%> 
-<%
-=end%>
-<h3>
-<%= @user.name %>
-<%#= current_user.company.name %>
+<h3> You belong to :
+<%= current_user.company.name %> company
 </h3>
 
+<% if @courses.present? && @courses.size < 2 %>
+<h3> Your course is <%= @courses.first.name %></h3>
+<% elsif @courses.present? && @courses.size > 1 %>
+<h3> Your courses are</h3>
+<ul>
+    <% @courses.map do |course| %>
+    <li><%= course.name %></li>
+    <% end %>
+</ul>
+<% end %>
 
+<h3> Your level is <h3> 
+
+
+
+
+</div>

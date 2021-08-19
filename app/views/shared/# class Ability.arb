@@ -6,57 +6,88 @@
 
 #       can :read, :all, public: true
 
-#       return unless userrole == 'admin'
-#       can :crud, :all
-#     end
-#   end
+# #       return unless userrole == 'admin'
+# #       can :crud, :all
+# #     end
+# #   end
 
 
 
-# <%
-# =begin%>
-#  <form class="d-flex">
-#         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-#         <button class="btn btn-outline-success" type="submit">Search</button>
-#       </form> 
-# <%
-# =end%>
+# # <%
+# # =begin%>
+# #  <form class="d-flex">
+# #         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+# #         <button class="btn btn-outline-success" type="submit">Search</button>
+# #       </form> 
+# # <%
+# # =end%>
 
 
-# <%
-# =begin%>
+
 #  <div class="container-fluid">
 # <div class="d-flex align-items-center justify-content-center">
 #     <input class="form-control me-2" type="Blabla" placeholder="Blabla" aria-label="Blabla">
 #     <button class="btn btn-danger w-100" onclick="traer()">blabla</button>
 #     <div class="mt-5" id=contenido"></div>
-# </div>
-# </div>
+#         </div>
+#         </div>
 
-# <script>
+#         <script>
 
-#   var content = document.querySelector('#contenido')
+#         var content = document.querySelector('#contenido')
 
-#   function traer(word) {
-#     fetch("https://dictionary35.p.rapidapi.com/wordSearchEnglish?query=book", {
-# 	"method": "GET",
-# 	"headers": {
-# 		"x-rapidapi-key": "fd3c79412bmsh12cc8a122fcc99ep1dfe33jsn17f672e1e3a9",
-# 		"x-rapidapi-host": "dictionary35.p.rapidapi.com"
-# 	}
-#     })
-    
-#     .then(response => response.json())
-#     .then(response => {
-#       console.log(response.result);
-#     })
-#     .catch(err => {
-#       console.error(err);
-#     })
-#    }
+#         function traer(word) {
+#             fetch("https://dictionary35.p.rapidapi.com/wordSearchEnglish?query=book", {
+#             "method": "GET",
+#             "headers": {
+#                 "x-rapidapi-key": "fd3c79412bmsh12cc8a122fcc99ep1dfe33jsn17f672e1e3a9",
+#                 "x-rapidapi-host": "dictionary35.p.rapidapi.com"
+#             }
+#             })
+            
+#             .then(response => response.json())
+#             .then(response => {
+#             console.log(response.result);
+#             })
+#             .catch(err => {
+#             console.error(err);
+#             })
+#         }
 
-#   traer('book')
+#         traer('book')
 
-# </script> 
-# <%
-# =end%>
+#         </script> 
+  
+#  <div class="container-fluid">
+#  <div class="d-flex align-items-center justify-content-center">
+#      <input class="form-control me-2" type="Blabla" placeholder="Blabla" aria-label="Blabla">
+#      <button class="btn btn-danger w-100" onclick="traer()">blabla</button>
+#      <div class="mt-5" id=contenido"></div>
+#  </div>
+#  </div>
+
+
+# # <script>
+# #   var content = document.querySelector('#contenido')
+
+# #   function traer() {
+# #     fetch("https://world-clock.p.rapidapi.com/json/est/now", {
+# #     "method": "GET",
+# #     "headers": {
+# #         "x-rapidapi-key": "d1baf306d8mshefcaa2643931dedp19b4e9jsn4a45078682ac",
+# #         "x-rapidapi-host": "world-clock.p.rapidapi.com"
+# #     }
+# #     })
+  
+# #     .then(response => response.json())
+# #     .then(response => {
+# #       console.log(response.result);
+# #     })
+# #     .catch(err => {
+# #       console.error(err);
+# #     })
+# #    }
+
+# #   traer('')
+
+# # </script>

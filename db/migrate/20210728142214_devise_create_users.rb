@@ -34,7 +34,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[6.1]
       # t.datetime :locked_at
 
       t.references :company, foreign_key: true, null: false
-
+      t.string :role, null: false
 
       t.timestamps null: false
     end

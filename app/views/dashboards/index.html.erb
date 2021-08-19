@@ -21,108 +21,76 @@
     </style>
   </head>
   <body>
-<h1 class="text-center">Scholarship Students</h1>
-    <div class="container mt-4 shadow-lg p3 mb-5 bg-body rounded">
-        <table class="table table-bordered table-striped">
-            <thead>
+
+
+
+      <h1 class="text-center">Scholarship Students</h1>
+          <div class="container mt-4 shadow-lg p3 mb-5 bg-body rounded">
+              <table class="table table-bordered table-striped">
+                  <thead>
+                      <tr>
+                          <th>ID</th>
+                          <th>NAME</th>
+                          <th>EMAIL</th>
+                          <th>PHONE NUMBER</th>
+                      </tr>
+                  </thead>
+                  <tbody id="data">
+                  </tbody>
+              </table>
+          </div>
+      <script>
+          let url = 'https://jsonplaceholder.typicode.com/users'
+          fetch(url)
+              .then(response => response.json())
+              .then(data => mostrarData(data))
+              .catch(error => console.log(error))
+        
+          const mostrarData = (data) => {
+              console.log(data)
+              let body = ''
+              for (let i = 0; i<data.length; i++){
+                  body += `<tr><td>${data[i].id}</td><td>${data[i].name}</td><td>${data[i].email}</td><td>${data[i].phone}</td></tr>`                
+              }
+              document.getElementById('data').innerHTML = body
+          }            
+      </script>
+
+        <br>
+        <br>
+       <h1 class="text-center">Graphics and Currency</h1>
+        <br>
+        <br>
+        <br>
+        <br>
+        <%= render 'form', dashboard: @dashboard %>
+
+        <%= column_chart @column_data, stacked: true, prefix: "$", thousands: "," %>
+        <br>
+        <br>
+        <br>
+        <br>
+        <%= pie_chart Dashboard.group(:type).count(:amount) %>
+            <br>
+            <table>
+              <thead>
                 <tr>
-                    <th>ID</th>
-                    <th>NAME</th>
-                    <th>EMAIL</th>
-                    <th>PHONE NUMBER</th>
-                    <th>COMPANY</th>
+                  <th>Date</th>
+                  <th>Subject</th>
+                  <th>Type</th>
+                  <th>Student</th>
                 </tr>
-            </thead>
-            <tbody id="data">
-            </tbody>
-
-        </table>
-
-    </div>
-
-
-
-    <script>
-        let url = 'https://jsonplaceholder.typicode.com/users'
-        fetch(url)
-            .then(response => response.json())
-            .then(data => mostrarData(data))
-            .catch(error => console.log(error))
-			
-        const mostrarData = (data) => {
-            console.log(data)
-            let body = ''
-            for (let i = 0; i<data.length; i++){
-                body += `<tr><td>${data[i].id}</td><td>${data[i].name}</td><td>${data[i].email}</td><td>${data[i].phone}</td><td>${data[i].company}</td></tr>`                
-            }
-            document.getElementById('data').innerHTML = body
-        }            
-    </script>
+              </thead>
+              <tbody>
+                <% @dashboards.each do |e| %>
+                  <tr>
+                    <td><%= e.date %></td>
+                    <td><%= e.description %></td>
+                    <td><%= e.type %></td>
+                    <td><%= e.amount %></td>
+                  </tr>
+                <% end %>
+              </tbody>
+            </table>
   </body>
-
-
-<br>
-<br>
-
-
-
-
-<h1 class="text-center">Graphics and Currency</h1>
-<br>
-<br>
-<br>
-<br>
-<%
-=begin%>
- <div class="container">
-  <div class="section">
-    <button class="btn blue" onclick="obtenerDatos('dolar')">Dolar</button>
-    <button class="btn red" id="uf">UF</button>
-  </div>
-  <div class="section">
-  <ul id="resultado"></ul>
-  </div>
-</div> 
-<%
-=end%>
-
-
-<%= render 'form', dashboard: @dashboard %>
-
-<%= column_chart @column_data, stacked: true, prefix: "$", thousands: "," %>
-<br>
-<br>
-<br>
-<br>
-
-<%= pie_chart Dashboard.group(:type).count(:amount) %>
-<br>
-<table>
-  <thead>
-    <tr>
-      <th>Date</th>
-      <th>Subject</th>
-      <th>Type</th>
-      <th>Student</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @dashboards.each do |e| %>
-      <tr>
-        <td><%= e.date %></td>
-        <td><%= e.description %></td>
-        <td><%= e.type %></td>
-        <td><%= e.amount %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<%
-=begin%>
- <script src="currency.js"></script> 
-<%
-=end%>
-</body>
-
 </html>

@@ -1,3 +1,4 @@
+<div class="container">
 <%= form_with(model: level) do |form| %>
   <% if level.errors.any? %>
     <div id="error_explanation">
@@ -11,12 +12,16 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <%
+=begin%>
+ <div class="field">
     <%= form.label :name %>
     <%= form.text_field :name %>
   </div>
 
   <div class="actions">
     <%= form.submit %>
-  </div>
+  </div> 
+<%
+=end%>
 <% end %>
