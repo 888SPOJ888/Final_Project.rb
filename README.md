@@ -14,7 +14,9 @@ necesitas instalar lo siguiente en tu PC:
 
 - Ruby-2.7.3
 - Rails 6.1.4
+
 Gemas Utilizadas
+
 - Devise
 - Chartkick
 - Groupdate
