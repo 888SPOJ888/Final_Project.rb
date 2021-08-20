@@ -1,6 +1,7 @@
 <div class="container">
 <p id="notice"><%= notice %></p>
 
+
 <h1>Students</h1>
 <div id='show'></div>
 <table>
@@ -24,7 +25,7 @@
         <td><%= student.course %></td>
         <td><%= student.level %></td>
         <td><%= student.telephone_number %></td>
-        <td><%= link_to 'Show', student %></td>
+        <td><%= link_to 'Show', student, remote: true %></td>
         <td><%= link_to 'Edit', edit_student_path(student) %></td>
         <td><%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
@@ -35,4 +36,10 @@
 <br>
 </div>
 
-<%= link_to 'New Student', new_student_path %>
+<div class="container">
+<h1>Random Users</h1>
+    <ul id="users"></ul>
+    <script src="../app.js"></script>
+</div>
+
+<%#= link_to 'New Student', new_student_path %>
