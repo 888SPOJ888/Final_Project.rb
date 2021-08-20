@@ -1,10 +1,10 @@
 class StudentsController < InheritedResources::Base
 
 
-  def show
-    render(partial: 'show') if request.xhr?
+  # def show
+  #   render(partial: 'show') if request.xhr?
     
-  end
+  # end
 
 
 

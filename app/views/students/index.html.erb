@@ -25,7 +25,7 @@
         <td><%= student.course %></td>
         <td><%= student.level %></td>
         <td><%= student.telephone_number %></td>
-        <td><%= link_to 'Show', student, remote: true %></td>
+        <td><%= link_to 'Show', student, remote: false %></td>
         <td><%= link_to 'Edit', edit_student_path(student) %></td>
         <td><%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>

@@ -33,7 +33,7 @@ end
   puts "Created Company: #{company.name}"
 end
 10.times do
-  course = Course.create!(name: Faker::Educator.subject, level: levels.sample)
+  course = Course.create!(name: Faker::Educator.subject)
   puts "Created Course: #{course.name}"
 end
 
